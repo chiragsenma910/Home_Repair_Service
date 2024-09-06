@@ -1,0 +1,302 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 18%;
+    background-color: #262626; /* Darker background color */
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.user-image img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+}
+
+.user-name p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sidebar menu styles */
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for smoother hover effects */
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #4a4a4a; /* Darker background color on hover */
+    color: #00eaff; /* Brighter text color on hover */
+}
+
+.sidebar-menu ul li:last-child a:hover {
+    color: #ff0000; /* Red text color on hover for the last link */
+}
+
+.sidebar-menu ul li hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 10px 0;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the service items */
+.service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Style for the service item heading */
+.service-item h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style for the worker details section */
+.worker-details {
+    margin-top: 15px;
+}
+
+/* Style for worker details paragraph */
+.worker-details p {
+    margin-bottom: 5px;
+}
+
+/* Style for the description paragraph */
+.service-item p {
+    margin-bottom: 10px;
+}
+
+/* Style for the status paragraph */
+.status {
+    margin-bottom: 5px;
+}
+
+/* Style for the pending status */
+.status.pending {
+    color: #ff9800; /* Orange color */
+}
+
+/* Style for the accepted status */
+.status.accepted,.status.in_progress,.status.completed  {
+    color: #4caf50; /* Green color */
+}
+
+/* Style for the rejected status */
+.status.rejected {
+    color: #f44336; /* Red color */
+}
+
+
+/* Style for the cancel button */
+.cancel-button,.proceed-to-pay-button {
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+.proceed-to-pay-button{
+    background-color: #007bff;
+  }
+.proceed-to-pay-buttonn:hover{
+    background-color: #0056b3;
+  }
+
+/* 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.popup-content, .payment-process-content, .review-form-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+.popup-content h3, .payment-process-content h3, .review-form-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+.popup-content button, .payment-process-content button, .review-form-content button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+.popup-content button.cancel-button, .review-form-content button.cancel-button {
+    background: #dc3545;
+}
+.popup-content button:hover, .payment-process-content button:hover, .review-form-content button:hover {
+    opacity: 0.9;
+} */
+.review-form-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    font-size: 2em;
+    color: #ddd;
+    cursor: pointer;
+}
+.star-rating input:checked ~ label,
+.star-rating input:checked ~ label ~ label {
+    color: #ffd700;
+}
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .popup-content{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  .popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  .popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .popup-content img {
+    width: 100%; /* Ensure the image takes up the full width of the popup */
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 10px; /* Add padding around the image */
+    margin-bottom: 15px; /* Add bottom margin to create space between the image and other content */
+    /* border: 1px solid #ddd; Add a border to the image */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+  .popup-content button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .popup-content button.cancel-button {
+    background: #dc3545;
+  }
+  .popup-content button:hover {
+    opacity: 0.9;
+  }

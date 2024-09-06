@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+<body>
+    <script src="js/utility.js"></script>
+    <div class="navbar">
+      <div class="logo"><img src="img/homepage/logo1.svg" alt="" /></div>
+      <% if (loggedin) { %>
+        <nav>
+            <ul>
+              <li data-url="/homepage">Home</li>
+              <li data-url="/serviceselection">Services</li>
+              <li data-url="/aboutus">About Us</li>
+              <li data-url="/contactus">Contact Us</li>
+              <!-- <li data-url="/joinus">Join Us</li> -->
+            </ul>
+            <div class="profile-container">
+              <% if (user && user.firstname) { %>
+                <p>Hello, <%= user.firstname %></p>
+              <% } else { %>
+                <p>Hello, Welcome</p>
+              <% } %>
+              <!-- Display profile image if available, otherwise display default image -->
+              <!-- <img src="img/homepage/usericon2.svg" alt="Profile Picture" id="profile-picture"> -->
+              <% if (user && user.profile_image) { %>
+                <img src="<%= user.profile_image %>" alt="Profile Picture" id="profile-picture">
+              <% } else { %>
+                <img src="img/homepage/usericon2.svg" alt="Default Profile Image" id="profile-picture">
+              <% } %>
+              
+              <div class="profile-card" id="profileCard">
+                <form action="<%= user.role === 'user' ? '/userprofile' : '/workerprofile' %>" method="get">
+                    <button type="submit" class="btn btn-edit">Profile</button>
+                </form>              
+                <form action="/logout" method="GET">
+                    <button type="submit" id="logout-btn">Logout</button>
+                </form>
+            </div>
+            
+            </div>
+          </nav>
+      <% } else { %>
+        <nav>
+          <ul>
+            <li data-url="/homepage">Home</li>
+            <li data-url="/serviceselection">Services</li>
+            <li data-url="/aboutus">About Us</li>
+            <li data-url="/contactus">Contact Us</li>
+            <!-- <li data-url="/joinus">Join Us</li> -->
+          </ul>
+          <button id="loginbtn">Log In</button>
+        </nav>
+      <% } %>
+    </div>
+</body>
+</html>

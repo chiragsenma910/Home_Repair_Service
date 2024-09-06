@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/utility.css">
+    <title>FIX IT PRO</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <section class="intro">
+      <div class="intro-content">
+        <p class="intro-heading">We are Experts in</p>
+        <p class="intro-subheading">Repair & Fixes</p>
+        <p class="intro-description">
+          We specialize in expert repair and fixing.
+        </p>
+        <p class="intro-description">
+          Our team is dedicated to resolving issues ensuring your satisfaction.
+        </p>
+      </div>
+      <img
+        src="img/homepage/home_page_2.jpg"
+        alt="Repair Services"
+        class="intro-image"
+      />
+    </section>
+
+    <p id="section-title">Our Services</p>
+    <section class="services">
+      <div class="row">
+        <div class="card plumber">
+          <div id="plumber"></div>
+          <h2>Plumber</h2>
+          <p>Plumbing issues can't wait. We will fix your flow fastest.</p>
+        </div>
+        <div class="card electrician">
+          <div id="electrician"></div>
+          <h2>Electrician</h2>
+          <p>
+            Our technicians will resolve your electrical issues in a flash of a
+            light.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card painter">
+          <div id="paintworker"></div>
+          <h2>Paint Work</h2>
+          <p>Skillful workers will add beautiful colors to your house.</p>
+        </div>
+        <div class="card carpenter">
+          <div id="carpenter"></div>
+          <h2>Carpenter</h2>
+          <p>They will fix or build any furniture that you ask.</p>
+        </div>
+      </div>
+    </section>
+
+    <p id="section-title2">Your Local Home Services Expert</p>
+    <section class="benefits">
+      <div class="benefits-container">
+        <div class="sec1">
+          <div class="benefit">
+            <img
+              src="img/homepage/satisfaction.png"
+              alt="Satisfaction Guarantee"
+            />
+            <p>100% Satisfaction</p>
+          </div>
+          <div class="benefit">
+            <img src="img/homepage/worker.png" alt="Expert Workers" />
+            <p>Expert Workers</p>
+          </div>
+          <div class="benefit">
+            <img src="img/homepage/24photo.png" alt="24/7 Service" />
+            <p>24/7 Service</p>
+          </div>
+        </div>
+        <div class="sec1">
+          <div class="benefit">
+            <img src="img/homepage/mordentools.png" alt="Modern Tools" />
+            <p>Modern Tools</p>
+          </div>
+          <div class="benefit">
+            <img src="img/homepage/pricing.png" alt="Upfront Pricing" />
+            <p>Upfront Pricing</p>
+          </div>
+          <div class="benefit">
+            <img src="img/homepage/rating.png" alt="A+ Rating" />
+            <p>A+ Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="customer-reviews">
+      <div class="review-container">
+        <img
+          src="img/homepage/customer_rating.jpg"
+          alt="customer_Rating"
+          id="customer_rating"
+        />
+        <div class="container">
+          <div class="top-left">
+            <img src="img/homepage/desh.png" alt="desh" />
+          </div>
+          <div class="center-text">
+            <p>Whats Our</p>
+            <p id="orange_p">Customer Says</p>
+          </div>
+          <div class="bottom-right">
+            <img src="img/homepage/desh2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="custreview">
+        <div class="cardrev">
+          <div class="image-container">
+            <img src="img/homepage/vivek.png" alt="Customer Image" />
+          </div>
+          <div class="content">
+            <h3>Vivek Patel</h3>
+            <div class="rating">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+            </div>
+            <p class="comment">
+              "The product was amazing. I loved it!The product was amazing. I
+              loved it!"The product was amazing. I loved it!
+            </p>
+          </div>
+        </div>
+        <div class="cardrev">
+          <div class="image-container">
+            <img src="img/homepage/Arohi.png" alt="Customer Image" />
+          </div>
+          <div class="content">
+            <h3>Arohi Patel</h3>
+            <div class="rating">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+            </div>
+            <p class="comment">
+              "The product was amazing. I loved it!The product was amazing. I
+              loved it!The product was amazing. I loved it!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('footer') %>
+  </body>
+</html>

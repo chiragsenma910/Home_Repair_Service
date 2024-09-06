@@ -1,0 +1,278 @@
+/* Worker Selection Section */
+.worker-selection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.worker-selection .selection-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.worker-selection .selection-form select,
+.worker-selection .selection-form input[type="text"],
+.worker-selection .selection-form button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.worker-selection .selection-form select {
+  flex: 1;
+}
+
+.worker-selection .selection-form input[type="text"] {
+  flex: 1;
+}
+
+.worker-selection .selection-form button {
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.worker-selection .selection-form select:focus,
+.worker-selection .selection-form input[type="text"]:focus,
+.worker-selection .selection-form button:focus {
+  outline: none;
+  border: 2px solid #0056b3;
+}
+
+.worker-selection .selection-form button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.no-workers-container {
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust height as needed */
+  text-align: center;
+}
+.no-workers-container2 {
+  /* display: none; Initially hidden */
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust height as needed */
+  text-align: center;
+}
+
+/* No Workers Image */
+.no-workers-container img {
+  max-width: 90%; /* Adjust the width as needed */
+  height: 90%; /* Maintain aspect ratio */
+}
+.no-workers-container2 img {
+  max-width: 90%; /* Adjust the width as needed */
+  height: 90%; /* Maintain aspect ratio */
+}
+
+/* Worker Cards */
+.worker-cards {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.worker-selection .worker-card {
+  width: 100%;
+  max-width: 260px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border: 1px solid #000;
+  /* flex: 1 0 calc(25% - 15px); Ensure each card takes up a quarter of the container width */
+}
+
+
+.worker-selection .worker-card img {
+  width: 100%;
+  height: 180px; /* Adjusted height */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.worker-selection .worker-card .info {
+  padding: 15px; /* Adjusted padding */
+}
+
+.worker-selection .worker-card .name,
+.worker-selection .worker-card .profession,
+.worker-selection .worker-card .location,
+.worker-selection .worker-card .rating,
+.worker-selection .worker-card .btn {
+  font-family: inherit; /* Use the default font family */
+}
+
+.worker-selection .worker-card .name {
+  font-size: 18px; /* Adjusted font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+.worker-selection .worker-card .profession {
+  font-size: 16px; /* Adjusted font size */
+  color: #555;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+.worker-selection .worker-card .location {
+  font-size: 14px; /* Adjusted font size */
+  color: #888;
+  margin-bottom: 8px; /* Adjusted margin */
+}
+
+.worker-selection .worker-card .rating {
+  font-size: 16px; /* Adjusted font size */
+  font-weight: bold; /* Increased font weight */
+  color: #28a745; /* Changed color for better visibility */
+  margin-bottom: 8px; /* Adjusted margin */
+  display: flex;
+  align-items: center;
+}
+
+.worker-selection .worker-card .rating span {
+  margin-left: 3px;
+}
+
+.worker-selection .worker-card .btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0; /* Adjusted padding */
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px; /* Adjusted font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.worker-selection .worker-card .btn:hover {
+  background-color: #218838;
+}
+
+/* serviceselection.css */
+
+/* Floating Card Overlay Styles */
+#floating-card-wrapper{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 9999; /* Ensure it's above other content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#floating-card-wrapper.active {
+  display: flex; /* Display the overlay when active */
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .worker-selection {
+      max-width: calc(100% - 40px); /* Adjusted max-width */
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  .worker-selection .selection-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .worker-selection .selection-form select,
+  .worker-selection .selection-form input[type="text"],
+  .worker-selection .selection-form button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .worker-selection .selection-form select {
+      flex: 1;
+  }
+
+  .worker-selection .selection-form input[type="text"] {
+      flex: 1;
+  }
+
+  .worker-selection .selection-form button {
+      background-color: #007bff;
+      color: #ffffff;
+      cursor: pointer;
+  }
+
+  .worker-selection .selection-form select:focus,
+  .worker-selection .selection-form input[type="text"]:focus,
+  .worker-selection .selection-form button:focus {
+      outline: none;
+      border: 2px solid #0056b3;
+  }
+
+  .worker-selection .selection-form button:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+  }
+
+  /* Worker Cards */
+  .worker-selection .worker-card {
+      width: calc(50% - 10px); /* Adjusted width */
+      max-width: calc(50% - 10px); /* Adjusted max-width */
+      margin-bottom: 20px;
+  }
+
+  .worker-selection .worker-card img {
+      height: 150px; /* Adjusted height */
+  }
+
+  .worker-selection .worker-card .info {
+      padding: 10px; /* Adjusted padding */
+  }
+
+  .worker-selection .worker-card .name {
+      font-size: 16px; /* Adjusted font size */
+      margin-bottom: 3px; /* Adjusted margin */
+  }
+
+  .worker-selection .worker-card .profession {
+      font-size: 14px; /* Adjusted font size */
+      margin-bottom: 3px; /* Adjusted margin */
+  }
+
+  .worker-selection .worker-card .location {
+      font-size: 12px; /* Adjusted font size */
+      margin-bottom: 5px; /* Adjusted margin */
+  }
+
+  .worker-selection .worker-card .rating {
+      font-size: 14px; /* Adjusted font size */
+      margin-bottom: 5px; /* Adjusted margin */
+  }
+
+  .worker-selection .worker-card .btn {
+      padding: 8px 0; /* Adjusted padding */
+      font-size: 14px; /* Adjusted font size */
+  }
+}

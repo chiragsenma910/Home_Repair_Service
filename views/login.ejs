@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginsignup.css">
+</head>
+<body>
+    <script src="js/loginsignup.js"></script>
+
+    <div class="container">
+        <div class="content">
+            <div class="logo-img">
+                <img src="img/lgsp/logo2.svg" alt="fixitpro">
+            </div>
+            <h2>Welcome back</h2>
+            <div class="login-form">
+                <form id="loginform" action="/login" method="POST">
+                    <div class="form-group">
+                        <select name="role" class="margin role" id="role" required onchange="toggleProfessionDropdown()">
+                        <option value="user">User</option>
+                        <option value="worker">Worker</option>
+                    </select>   
+                  </div>                 
+                    <div class="form-group" id="profession-group" style="display: none;">
+                        <select name="profession" class="margin role" id="profession">
+                          <option value="plumber">Plumber</option>
+                          <option value="electrician">Electrician</option>
+                          <option value="carpenter">Carpenter</option>
+                          <option value="paintwork">Paintwork</option>
+                          <!-- Add other profession options here -->
+                        </select>
+                      </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="margin" id="mail" required>
+                        <label for="name">Email address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="margin" required>
+                        <label for="name">Password</label>
+                        <div class="input-icon" id="eye-icon"></div>
+                    </div>
+                    <a href="#" id="forgot">Forgot Password?</a> <!-- Adjust the href to trigger the overlay -->
+                    <input type="submit" value="Login" class="margin" id="btn">
+                    <p class="margin" id="forsignup">Don't have an account? <a class="margin" href="/signup" style="text-decoration: none; color: #007bff;">Sign Up</a></p>
+                    <div class="lines margin">
+                        <hr class="line"><p>OR</p><hr class="line">
+                    </div>
+                    <div class="margin otheroption" >
+                        <img src="img/lgsp/googlelogo.png" alt="googlelogo" style="height: 22px; width: 22px;">
+                        <span>Google</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Overlay -->
+    <div id="forgot-password-overlay" class="overlay">
+        <!-- Include forgotpassword.ejs content here -->
+        <%- include ('forgotpassword') %>
+    </div>
+
+</body>
+</html>

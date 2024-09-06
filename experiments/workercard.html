@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Card Example</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .worker-card {
+      width: calc(25% - 15px); /* Adjusted width */
+      max-width: 260px; /* Adjusted max-width */
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .worker-card img {
+      width: 100%;
+      height: 180px; /* Adjusted height */
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .worker-card .info {
+      padding: 15px; /* Adjusted padding */
+    }
+
+    .worker-card .name {
+      font-size: 18px; /* Adjusted font size */
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px; /* Adjusted margin */
+    }
+
+    .worker-card .profession {
+      font-size: 16px; /* Adjusted font size */
+      color: #555;
+      margin-bottom: 5px; /* Adjusted margin */
+    }
+
+    .worker-card .location {
+      font-size: 14px; /* Adjusted font size */
+      color: #888;
+      margin-bottom: 8px; /* Adjusted margin */
+    }
+
+    .worker-card .rating {
+      font-size: 16px; /* Adjusted font size */
+      font-weight: bold; /* Increased font weight */
+      color: #28a745; /* Changed color for better visibility */
+      margin-bottom: 8px; /* Adjusted margin */
+      display: flex;
+      align-items: center;
+    }
+
+    .worker-card .rating span {
+      margin-left: 3px;
+    }
+
+    .worker-card .btn {
+      display: block;
+      width: 100%;
+      padding: 10px 0; /* Adjusted padding */
+      background-color: #28a745;
+      color: #fff;
+      font-size: 16px; /* Adjusted font size */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .worker-card .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">John Doe</div>
+    <div class="profession">Plumber</div>
+    <div class="location">New York, USA</div>
+    <div class="rating">Rating: 4.5 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Jane Smith</div>
+    <div class="profession">Electrician</div>
+    <div class="location">Los Angeles, USA</div>
+    <div class="rating">Rating: 4.2 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Mike Johnson</div>
+    <div class="profession">Carpenter</div>
+    <div class="location">Chicago, USA</div>
+    <div class="rating">Rating: 4.7 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Emily Brown</div>
+    <div class="profession">Painter</div>
+    <div class="location">Miami, USA</div>
+    <div class="rating">Rating: 4.8 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">John Doe</div>
+    <div class="profession">Plumber</div>
+    <div class="location">New York, USA</div>
+    <div class="rating">Rating: 4.5 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Jane Smith</div>
+    <div class="profession">Electrician</div>
+    <div class="location">Los Angeles, USA</div>
+    <div class="rating">Rating: 4.2 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Mike Johnson</div>
+    <div class="profession">Carpenter</div>
+    <div class="location">Chicago, USA</div>
+    <div class="rating">Rating: 4.7 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+<div class="worker-card">
+  <img src="https://via.placeholder.com/300x300" alt="Worker Image">
+  <div class="info">
+    <div class="name">Emily Brown</div>
+    <div class="profession">Painter</div>
+    <div class="location">Miami, USA</div>
+    <div class="rating">Rating: 4.8 <span>&#9733;</span></div> <!-- Star after rating -->
+    <a href="#" class="btn">View Profile</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Dashboard</title>
+    <link rel="stylesheet" href="/css/admin/admindashboard_user.css">
+</head>
+<body>
+
+    <script src="/js/admin/admindashboard_user.js"></script> <!-- JavaScript file -->
+
+    <div class="sidebar">
+        <!-- Home Icon -->
+        <div class="home-icon">
+            <a href="/homepage"><img src="img/dashboard/homeicon.svg" alt=""></a>
+        </div>
+        <!-- User Image and Name -->
+       
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="/manageuser">Manage User</a></li>
+                <hr>
+                <li><a href="/manageworker">Manage Worker</a></li>
+                <hr>
+                <li><a href="/manageappointments">Manage Appointments</a></li>
+                <hr>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>User Management</h1>
+        <button id="showAllUsersButton">Show All Users</button>
+        
+        <table id="usersTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>State</th>
+                    <th>District</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Pin Code</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+
+</body>
+</html>

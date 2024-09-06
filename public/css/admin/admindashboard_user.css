@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 18%;
+    background-color: #262626; /* Darker background color */
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+/* Sidebar menu styles */
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for smoother hover effects */
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #4a4a4a; /* Darker background color on hover */
+    color: #00eaff; /* Brighter text color on hover */
+}
+
+.sidebar-menu ul li:last-child a:hover {
+    color: #ff0000; /* Red text color on hover for the last link */
+}
+
+.sidebar-menu ul li hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 10px 0;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+#showAllUsersButton {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#showAllUsersButton:hover {
+    background-color: #0056b3;
+}
+
+#usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#usersTable th, #usersTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#usersTable th {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+#usersTable td {
+    text-align: left;
+}
+
+#usersTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#usersTable tr:hover {
+    background-color: #ddd;
+}
+
+.deleteUserButton {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.deleteUserButton:hover {
+    background-color: #cc0000;
+}

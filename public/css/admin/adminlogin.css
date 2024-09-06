@@ -1,0 +1,129 @@
+/* Resetting default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    height: 93vh;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0px;
+}
+
+.logo-img img {
+    height: auto;
+    max-height: 150px;
+    width: 150px;
+}
+
+.login-form {
+    width: 95%;
+    height: 100%;
+}
+
+.margin {
+    margin: 15px 0px;
+}
+
+.login-form input {
+    padding: 10px 0px 10px 15px;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #000;
+}
+
+.form-group {
+    position: relative;
+}
+
+input[type="email"]:focus~label,
+input[type="password"]:focus~label, 
+input[type="text"]:focus~label {
+    top: 15px;
+    left: 10px;
+    font-size: 12px;
+    color: #000000;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #777;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+input[type="email"].not-empty~label,
+input[type="password"].not-empty~label, 
+input[type="text"].not-empty~label {
+    top: 15px;
+    left: 10px;
+    color: #000000;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+#eye-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    cursor: pointer;
+}
+
+#eye-icon {
+    right: 3%;
+    width: 28px;
+    height: 16px;
+    background-image: url('../../img/lgsp/openeye.svg');
+}
+
+
+#btn {
+    color: #fff;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#btn:hover {
+    color: #ffffff;
+    background-color: rgb(41, 41, 41);
+}
+
+
+

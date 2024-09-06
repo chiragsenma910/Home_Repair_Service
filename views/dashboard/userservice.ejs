@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Service Dashboard</title>
+    <link rel="stylesheet" href="/css/userservice.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <!-- Home Icon -->
+        <div class="home-icon">
+            <a href="/homepage"><img src="img/dashboard/homeicon.svg" alt=""></a>
+        </div>
+        <!-- User Image and Name -->
+        <div class="part-1">
+            <div class="user-image">
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image">
+                <% } else { %>
+                    <img src="img/dashboard/usericon2.svg" alt="Default Profile Image">
+                <% } %>
+            </div>
+            <div class="user-name">
+                <p><%= user ? user.firstname + ' ' + user.lastname : 'Guest' %></p>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="/userprofile">Profile</a></li>
+                <hr>
+                <li><a href="/userchangepassword">Password</a></li>
+                <hr>
+                <li><a href="/userservice">Service</a></li>
+                <hr>
+                <li><a href="#">Settings</a></li>
+                <hr>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Booked Services</h1>
+        </div>
+        <div class="service-list">
+            <!-- Appointments will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="/js/userservice.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.2;
+  background-color: #ffffff;
+  font-size: 16;
+}
+
+.navbar {
+background-color: #343a40;
+color: #ffffff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 30px; /* Add padding to the navbar */
+}
+
+.logo {
+margin: 0px; /* Remove margin to prevent extra space */
+}
+
+.logo img {
+height: auto; /* Use auto height for flexibility */
+width: 180px;
+}
+
+.navbar nav {
+display: flex;
+align-items: center;
+}
+
+.navbar ul {
+list-style: none;
+display: flex;
+cursor: pointer;
+margin: 0; /* Remove margin to prevent extra space */
+}
+
+.navbar nav ul li {
+margin: 0 20px; /* Adjust margin for spacing between items */
+position: relative;
+}
+
+.navbar nav ul li:hover {
+color: #fff;
+}
+
+.navbar nav ul li::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: #ffffff; /* Color of the underline */
+bottom: -3px; /* Adjust this value to position the underline */
+left: 0;
+transform: scaleX(0); /* Start from the middle */
+transition: transform 0.6s ease; /* Transition width change */
+}
+
+.navbar nav ul li:hover::after {
+transform: scaleX(1);
+}
+
+.navbar #loginbtn {
+padding: 9px 18px;
+font-size: 1rem;
+margin: 0 5px; /* Remove margin to prevent extra space */
+background-color: #28a745;
+color: #ffffff;
+font-weight: 550;
+border: 2px solid #28a745;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.navbar #loginbtn:hover {
+background-color: #218838;
+border-color: #218838;
+}
+
+.profile-container {
+  display: flex; /* Add flexbox layout */
+  align-items: center; /* Center items vertically */
+}
+
+.profile-card p {
+  margin: 0px; /* Remove default margin */
+}
+
+
+#profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: fill;
+  margin: 0px 15px;
+  border: 2px solid #ffffff;
+  padding: 2px;
+}
+
+.profile-card {
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: none;
+  z-index: 1; /* Ensure profile card is above other elements */
+}
+
+.profile-card.active {
+  display: block;
+}
+
+/* .profile-card .btn,#logout-btn{
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 2px solid #333;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+} */
+
+.profile-card .btn {
+  display: flex;
+  align-items: center;
+  margin: 10px 5px;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid #28a745;
+  background-color: #28a745;
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.profile-card .btn:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+#logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px;
+  padding: 5px;
+  color: #fff;
+  border: 2px solid #dc3545;
+  background-color: #dc3545;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+#logout-btn:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .footer-container {
+    max-width: 900px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footerlogo img {
+    height: 120px;
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .social-media .platform {
+    display: flex;
+    margin: 10px;
+  }
+  .platform li {
+    list-style: none;
+    margin: 10px 10px;
+    cursor: pointer;
+  }
+  .platform li img {
+    height: 2vw;
+    width: 2vw;
+  }
+  .footer-section {
+    text-align: left;
+    margin: 20px;
+  }
+  .footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-section ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .footer-legal {
+    margin-top: 30px;
+  }
+  .footer-legal p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  .footer-legal p:last-child {
+    margin-top: 20px;
+  }
+  .footer-legal p a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .footer-legal p a:hover {
+    text-decoration: underline;
+  }

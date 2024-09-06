@@ -1,0 +1,229 @@
+
+.intro {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+}
+.intro-subheading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fb8524;
+  margin: 5px 5px 20px 5px;
+}
+.intro-description {
+  font-size: 18px;
+  color: #555555;
+  margin: 5px;
+}
+.intro-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 40px auto;
+}
+#section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fb8524;
+  text-align: center;
+  margin: 30px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  padding: 5px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  color: #555555;
+  text-align: center;
+}
+#plumber {
+  background-image: url("../img/homepage/plumber.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+  border-radius: 10px;
+}
+#electrician {
+  background-image: url("../img/homepage/electrician.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+  border-radius: 10px;
+}
+#paintworker {
+  background-image: url("../img/homepage/painter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+  border-radius: 10px;
+}
+#carpenter {
+  background-image: url("../img/homepage/carpenter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+  border-radius: 10px;
+}
+#section-title2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fb8524;
+  text-align: center;
+  margin: 30px;
+}
+.benefits {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+.benefits-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.sec1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.benefit {
+  text-align: center;
+  margin: 20px;
+}
+.benefit img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.customer-reviews {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  color: #ffffff;
+}
+.review-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  color: #000;
+  align-items: center;
+}
+#customer_rating {
+  height: 500px;
+  width: 500px;
+  margin: 0px 15% 0px 5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-left {
+  align-self: flex-start;
+}
+.bottom-right {
+  align-self: flex-end;
+}
+.center-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+.center-text #orange_p {
+  color: #fb8524;
+}
+.reviewtxt img {
+  height: 4vw;
+  width: 4vw;
+}
+.custreview {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cardrev {
+  width: 300px;
+  height: 320px;
+  margin: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+}
+.image-container {
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* Changed to 50% for a circular shape */
+  margin: 10px;
+  border: 2px solid #000;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Changed to 50% for a circular shape */
+}
+.content {
+  padding: 10px;
+}
+.rating {
+  color: orange;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.comment {
+  margin-top: 0;
+}

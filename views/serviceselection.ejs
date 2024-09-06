@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Selection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/serviceselection.css" />
+  <link rel="stylesheet" href="css/utility.css">
+  <link rel="stylesheet" href="css/floatingcardmodal.css" />
+</head>
+<body>
+  <%- include('navbar') %>
+
+  <main class="worker-selection">
+    <div class="selection-form">
+      <select id="service-select">
+        <option value="">Select Service</option>
+        <option value="plumber">Plumber</option>
+        <option value="electrician">Electrician</option>
+        <option value="carpenter">Carpenter</option>
+        <option value="paintwork">Paint Work</option>
+      </select>
+      <select id="state">
+        <option value="">Select State</option>
+      </select>
+      <select id="district" disabled>
+        <option value="">Select District</option>
+      </select>
+      <select id="city" disabled>
+        <option value="">Select City</option>
+      </select>
+      <button id="search-button">Search</button>
+    </div>
+
+    <div class="no-workers-container" style="display: none;">
+      <!-- The image will be inserted here -->
+    </div>
+    <div class="no-workers-container2">
+      <img src="img/serviceselection/searchhere2.jpg" alt="Search Here">
+    </div>
+    
+    <div class="worker-cards">
+      <!-- Worker cards will be dynamically inserted here -->
+    </div>
+
+    <div class="pagination">
+      <!-- Pagination navigation will be dynamically generated here -->
+    </div>
+    <% if (loggedin) { %>
+      <script>
+        var loggedinUser = true;
+        var user=session.user;
+        // var userId= user.id;
+      </script>
+    <% } else { %>
+      <script>
+        var loggedinUser = false;
+      </script>
+    <% } %>
+    
+
+  </main>
+  
+    <!-- Floating Card Modal Wrapper -->
+    <div id="floating-card-wrapper" class="overlay">
+      <%- include('floatingcardmodal') %>
+    </div>
+
+  <%- include('footer') %>
+  
+  <script src="/js/serviceselection.js"></script>
+
+</body>
+</html>

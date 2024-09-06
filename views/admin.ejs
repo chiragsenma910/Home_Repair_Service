@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <!-- User Management Section -->
+    <h2>User Management</h2>
+    <button onclick="showAddUserForm()">Add User</button>
+    <ul id="userList"></ul>
+
+    <!-- Appointment Management Section -->
+    <h2>Appointment Management</h2>
+    <button onclick="showAddAppointmentForm()">Add Appointment</button>
+    <ul id="appointmentList"></ul>
+
+    <!-- User and Appointment Forms -->
+    <div id="userForm" style="display: none;">
+        <!-- User form will go here -->
+    </div>
+    <div id="appointmentForm" style="display: none;">
+        <!-- Appointment form will go here -->
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

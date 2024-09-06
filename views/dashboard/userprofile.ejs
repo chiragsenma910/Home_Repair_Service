@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Dashboard</title>
+    <link rel="stylesheet" href="/css/userdashboard.css">
+</head>
+<body>
+
+    <script src="/js/userdashboard.js"></script> <!-- JavaScript file -->
+
+    <div class="sidebar">
+        <!-- Home Icon -->
+        <div class="home-icon">
+            <a href="/homepage"><img src="img/dashboard/homeicon.svg" alt=""></a>
+        </div>
+        <!-- User Image and Name -->
+        <div class="part-1">
+            <div class="user-image">
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image">
+                <% } else { %>
+                    <img src="img/dashboard/usericon2.svg" alt="Default Profile Image">
+                <% } %>
+            </div>
+            <div class="user-name">
+                <p><%= user ? user.firstname + ' ' + user.lastname : 'Guest' %></p>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="/userprofile">Profile</a></li>
+                <hr>
+                <li><a href="/userchangepassword">Password</a></li>
+                <hr>
+                <li><a href="/userservice">Service</a></li>
+                <hr>
+                <li><a href="#">Settings</a></li>
+                <hr>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="profile-card">
+            <div class="profile-image">
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image" id="proimg">
+                <% } else { %>
+                    <img src="/img/dashboard/usericon.svg" alt="Default Profile Image" id="proimg">
+                <% } %>
+                <button class="edit-profile" id="changeprofileimg"><img src="img/dashboard/editicon.svg" alt=""></button>
+                <form id="profile-image-form" action="/api/upload-profile-image" method="post" enctype="multipart/form-data">
+                    <input type="file" id="upload-profile-img" name="profile_image" accept="image/*" style="display: none;">
+                    <div class="image-action-buttons">
+                        <button type="submit" class="save-button save-image-button" style="display: none;">Save Image</button>
+                        <button type="button" class="cancel-button cancel-image-button" style="display: none;">Cancel</button>   
+                    </div>
+                </form>
+            </div>
+            
+            <div class="user-info">
+                <div class="section-heading">
+                    Personal Information *
+                    <button class="edit-profile-info" id="changeprofileinfo"><img src="img/dashboard/editicon.svg" alt=""> Edit</button>
+                </div>
+                <div class="info-item">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstname" value="<%= user ? user.firstname : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="lastame">Last Name:</label>
+                    <input type="text" id="lastname" value="<%= user ? user.lastname : '' %>" readonly>
+                </div>
+                <div class="section-heading">Contact Information</div>
+                <div class="info-item">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="<%= user ? user.email : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="text" id="mobile" value="<%= user ? user.mobile : '' %>" readonly>
+                </div>
+
+                <div class="section-heading">Residential Information</div>
+                 <div class="info-item">
+                    <label for="state">State: <%= user ? user.state : '' %> </label>
+                    <select id="state" disabled>
+                            <option value="">Select State</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="district">District: <%= user ? user.district : '' %></label>
+                    <select id="district" disabled>
+                        <option value="">Select District</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="city">City: <%= user ? user.city : '' %></label>
+                    <select id="city" disabled>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" value="<%= user ? user.address : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" id="pin_code" value="<%= user ? user.pin_code : '' %>" readonly>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="save-button save-info-button" style="display: none;">Save Info</button>
+                <button class="cancel-button cancel-info-button" style="display: none;">Cancel</button>   
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

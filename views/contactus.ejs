@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contactus.css" />
+    <link rel="stylesheet" href="css/utility.css">
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+      
+    <script
+      src="https://kit.fontawesome.com/c32adfdcda.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Fix It Pro - Contact Us</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+
+    <section class="contact-section">
+      <div class="contact-info">
+        <h1>Contact Information</h1>
+        <div class="info-item">
+          <i class="fas fa-home"></i>
+          <p>Ganpat University,Kherva,Mahesana, Gujarat 384001</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>fixitpro2023@gmail.com</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <p>8401138433</p>
+        </div>
+      </div>
+      <div class="contact-image">
+        <img src="img/contactus/contact_us main img_1.jpg" alt="Call center" />
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="contact-form-container">
+        <h2>Have a Query or Problem?</h2>
+        <p>Fill out the form below and let us know!</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="8852f49a-f023-4011-ac3c-9b140bc0b3fd">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <%- include('footer') %>
+  </body>
+</html>

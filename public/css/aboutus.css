@@ -1,0 +1,91 @@
+
+  
+  /* Styles for the hero section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    margin-left: 50px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  
+  .tagline p {
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Styles for the vision & mission section */
+  .vision-mission {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .vision-mission h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem; /* Adjusted font size */
+    color: #333;
+  }
+  
+  .description p {
+    font-size: 1rem; /* Adjusted font size */
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .vision h2,
+  .mission h2 {
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #333;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* Styles for the features section */
+  .features {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+  }
+  
+  .features .feature {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .features img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .features img:hover {
+    transform: scale(1.1);
+  }
+  
